@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="Entidades\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +18,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DATA\GestionProyectos.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

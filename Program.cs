@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Parcial2_ap1_2018_0619.UI;
 
 namespace Parcial2_ap1_2018_0619
 {
@@ -17,7 +18,7 @@ namespace Parcial2_ap1_2018_0619
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForms());
         }
     }
 }
