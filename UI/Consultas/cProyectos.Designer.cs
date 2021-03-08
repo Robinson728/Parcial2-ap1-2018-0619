@@ -62,7 +62,7 @@ namespace Parcial2_ap1_2018_0619.UI.Consultas
             // 
             // FiltrarTextBox
             // 
-            this.FiltrarTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.FiltrarTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FiltrarTextBox.Location = new System.Drawing.Point(239, 15);
             this.FiltrarTextBox.Name = "FiltrarTextBox";
@@ -87,8 +87,8 @@ namespace Parcial2_ap1_2018_0619.UI.Consultas
             this.ConsultasDataGridView.AllowUserToAddRows = false;
             this.ConsultasDataGridView.AllowUserToDeleteRows = false;
             this.ConsultasDataGridView.AllowUserToOrderColumns = true;
-            this.ConsultasDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ConsultasDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultasDataGridView.Location = new System.Drawing.Point(2, 50);

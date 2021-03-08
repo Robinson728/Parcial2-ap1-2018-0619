@@ -64,7 +64,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 68);
+            this.label2.Location = new System.Drawing.Point(3, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 1;
@@ -90,6 +90,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.TiempotextBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.RequerimientotextBox);
@@ -99,18 +102,16 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.groupBox1.Controls.Add(this.RemoverButton);
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(3, 94);
+            this.groupBox1.Location = new System.Drawing.Point(3, 100);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(585, 303);
+            this.groupBox1.Size = new System.Drawing.Size(606, 219);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
             // 
             // TiempotextBox
             // 
-            this.TiempotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TiempotextBox.Location = new System.Drawing.Point(363, 45);
+            this.TiempotextBox.Location = new System.Drawing.Point(389, 45);
             this.TiempotextBox.Name = "TiempotextBox";
             this.TiempotextBox.Size = new System.Drawing.Size(119, 23);
             this.TiempotextBox.TabIndex = 19;
@@ -119,7 +120,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             this.label6.AutoSize = true;
             this.ErrorProvider.SetIconAlignment(this.label6, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.label6.Location = new System.Drawing.Point(363, 27);
+            this.label6.Location = new System.Drawing.Point(389, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 18;
@@ -127,11 +128,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // RequerimientotextBox
             // 
-            this.RequerimientotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.RequerimientotextBox.Location = new System.Drawing.Point(102, 45);
             this.RequerimientotextBox.Name = "RequerimientotextBox";
-            this.RequerimientotextBox.Size = new System.Drawing.Size(255, 23);
+            this.RequerimientotextBox.Size = new System.Drawing.Size(281, 23);
             this.RequerimientotextBox.TabIndex = 17;
             // 
             // label5
@@ -148,21 +147,19 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.DetallesdataGridView.AllowUserToAddRows = false;
             this.DetallesdataGridView.AllowUserToDeleteRows = false;
             this.DetallesdataGridView.AllowUserToOrderColumns = true;
-            this.DetallesdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.DetallesdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DetallesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DetallesdataGridView.Location = new System.Drawing.Point(6, 85);
             this.DetallesdataGridView.Name = "DetallesdataGridView";
             this.DetallesdataGridView.ReadOnly = true;
             this.DetallesdataGridView.RowTemplate.Height = 25;
-            this.DetallesdataGridView.Size = new System.Drawing.Size(573, 168);
+            this.DetallesdataGridView.Size = new System.Drawing.Size(594, 84);
             this.DetallesdataGridView.TabIndex = 11;
             // 
             // TareacomboBox
             // 
-            this.TareacomboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TareacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TareacomboBox.FormattingEnabled = true;
             this.TareacomboBox.Location = new System.Drawing.Point(6, 45);
@@ -174,7 +171,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             this.RemoverButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
-            this.RemoverButton.Location = new System.Drawing.Point(6, 258);
+            this.RemoverButton.Location = new System.Drawing.Point(6, 174);
             this.RemoverButton.Name = "RemoverButton";
             this.RemoverButton.Size = new System.Drawing.Size(98, 39);
             this.RemoverButton.TabIndex = 10;
@@ -186,7 +183,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             this.Agregarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
-            this.Agregarbutton.Location = new System.Drawing.Point(488, 35);
+            this.Agregarbutton.Location = new System.Drawing.Point(509, 35);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(91, 40);
             this.Agregarbutton.TabIndex = 11;
@@ -196,20 +193,20 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.DescripciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DescripciontextBox.Location = new System.Drawing.Point(97, 65);
+            this.DescripciontextBox.Location = new System.Drawing.Point(97, 71);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(491, 23);
+            this.DescripciontextBox.Size = new System.Drawing.Size(512, 23);
             this.DescripciontextBox.TabIndex = 5;
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.IdnumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdnumericUpDown.Location = new System.Drawing.Point(97, 7);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(97, 13);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
-            this.IdnumericUpDown.Size = new System.Drawing.Size(105, 23);
+            this.IdnumericUpDown.Size = new System.Drawing.Size(100, 23);
             this.IdnumericUpDown.TabIndex = 6;
             // 
             // ActivocheckBox
@@ -218,7 +215,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.ActivocheckBox.AutoSize = true;
             this.ActivocheckBox.Checked = true;
             this.ActivocheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ActivocheckBox.Location = new System.Drawing.Point(517, 9);
+            this.ActivocheckBox.Location = new System.Drawing.Point(538, 15);
             this.ActivocheckBox.Name = "ActivocheckBox";
             this.ActivocheckBox.Size = new System.Drawing.Size(71, 19);
             this.ActivocheckBox.TabIndex = 8;
@@ -229,7 +226,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             this.BuscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(217, 7);
+            this.BuscarButton.Location = new System.Drawing.Point(213, 13);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(42, 23);
             this.BuscarButton.TabIndex = 9;
@@ -237,8 +234,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // NuevoButton
             // 
+            this.NuevoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
-            this.NuevoButton.Location = new System.Drawing.Point(7, 403);
+            this.NuevoButton.Location = new System.Drawing.Point(7, 325);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(92, 41);
             this.NuevoButton.TabIndex = 12;
@@ -248,8 +246,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
-            this.GuardarButton.Location = new System.Drawing.Point(105, 403);
+            this.GuardarButton.Location = new System.Drawing.Point(105, 325);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(92, 41);
             this.GuardarButton.TabIndex = 13;
@@ -259,8 +258,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
-            this.EliminarButton.Location = new System.Drawing.Point(203, 403);
+            this.EliminarButton.Location = new System.Drawing.Point(203, 325);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(92, 41);
             this.EliminarButton.TabIndex = 14;
@@ -275,7 +275,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 42);
+            this.label3.Location = new System.Drawing.Point(3, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 15;
@@ -283,26 +283,28 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(97, 36);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(97, 42);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(105, 23);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(100, 23);
             this.FechadateTimePicker.TabIndex = 16;
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TotaltextBox.Location = new System.Drawing.Point(474, 403);
+            this.TotaltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotaltextBox.Location = new System.Drawing.Point(469, 325);
             this.TotaltextBox.Name = "TotaltextBox";
-            this.TotaltextBox.Size = new System.Drawing.Size(114, 23);
+            this.TotaltextBox.Size = new System.Drawing.Size(140, 23);
             this.TotaltextBox.TabIndex = 18;
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(393, 406);
+            this.label7.Location = new System.Drawing.Point(388, 328);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 15);
             this.label7.TabIndex = 17;
@@ -312,7 +314,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 447);
+            this.ClientSize = new System.Drawing.Size(612, 379);
             this.Controls.Add(this.TotaltextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.FechadateTimePicker);
@@ -328,7 +330,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(465, 348);
+            this.MinimumSize = new System.Drawing.Size(628, 418);
             this.Name = "rProyectos";
             this.Text = "Registro de Roles";
             this.groupBox1.ResumeLayout(false);
