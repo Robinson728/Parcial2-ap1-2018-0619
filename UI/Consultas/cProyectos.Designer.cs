@@ -120,7 +120,7 @@ namespace Parcial2_ap1_2018_0619.UI.Consultas
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(516, 202);
             this.Name = "cProyectos";
-            this.Text = "Consulta de Roles";
+            this.Text = "Consulta de Proyectos";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

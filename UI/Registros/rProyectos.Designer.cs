@@ -332,7 +332,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(628, 418);
             this.Name = "rProyectos";
-            this.Text = "Registro de Roles";
+            this.Text = "Registro de Proyectos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesdataGridView)).EndInit();
