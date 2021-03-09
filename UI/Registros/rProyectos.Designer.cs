@@ -45,7 +45,6 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.ActivocheckBox = new System.Windows.Forms.CheckBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -178,6 +177,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.RemoverButton.Text = "Remover";
             this.RemoverButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RemoverButton.UseVisualStyleBackColor = true;
+            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
             // 
             // Agregarbutton
             // 
@@ -190,6 +190,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.Agregarbutton.Text = "Agregar";
             this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // DescripciontextBox
             // 
@@ -209,19 +210,6 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.IdnumericUpDown.Size = new System.Drawing.Size(100, 23);
             this.IdnumericUpDown.TabIndex = 6;
             // 
-            // ActivocheckBox
-            // 
-            this.ActivocheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ActivocheckBox.AutoSize = true;
-            this.ActivocheckBox.Checked = true;
-            this.ActivocheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ActivocheckBox.Location = new System.Drawing.Point(538, 15);
-            this.ActivocheckBox.Name = "ActivocheckBox";
-            this.ActivocheckBox.Size = new System.Drawing.Size(71, 19);
-            this.ActivocheckBox.TabIndex = 8;
-            this.ActivocheckBox.Text = "EsActivo";
-            this.ActivocheckBox.UseVisualStyleBackColor = true;
-            // 
             // BuscarButton
             // 
             this.BuscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -231,6 +219,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.BuscarButton.Size = new System.Drawing.Size(42, 23);
             this.BuscarButton.TabIndex = 9;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // NuevoButton
             // 
@@ -243,6 +232,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // GuardarButton
             // 
@@ -255,6 +245,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
@@ -267,6 +258,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // ErrorProvider
             // 
@@ -325,7 +317,6 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ActivocheckBox);
             this.Controls.Add(this.IdnumericUpDown);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -333,6 +324,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.MinimumSize = new System.Drawing.Size(628, 418);
             this.Name = "rProyectos";
             this.Text = "Registro de Proyectos";
+            this.Load += new System.EventHandler(this.rProyectos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetallesdataGridView)).EndInit();
@@ -351,7 +343,6 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
-        private System.Windows.Forms.CheckBox ActivocheckBox;
         private System.Windows.Forms.DataGridView DetallesdataGridView;
         private System.Windows.Forms.ComboBox TareacomboBox;
         private System.Windows.Forms.Button RemoverButton;
