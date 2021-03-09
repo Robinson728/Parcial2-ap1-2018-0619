@@ -17,5 +17,13 @@ namespace Parcial2_ap1_2018_0619.Entidades
         public string Requerimiento { get; set; }
         public int Tiempo { get; set; }
 
+        public ProyectosDetalle()
+        {
+            DetalleId = 0;
+            TipoId = 0;
+            TipoTarea = string.Empty;
+            Requerimiento = string.Empty;
+            Tiempo = 0;
+        }
     }
 }

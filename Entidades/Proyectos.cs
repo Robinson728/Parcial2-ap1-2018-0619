@@ -15,7 +15,7 @@ namespace Parcial2_ap1_2018_0619.Entidades
         public int TipoId { get; set; }
         public DateTime Fecha { get; set; }
         public string Descripcion { get; set; }
-        public int Tiempo { get; set; }
+        public int TiempoTotal { get; set; }
 
         [ForeignKey("TipoId")]
         public virtual List<ProyectosDetalle> Detalle { get; set; }
@@ -25,7 +25,7 @@ namespace Parcial2_ap1_2018_0619.Entidades
             TipoId = 0;
             Fecha = DateTime.Now;
             Descripcion = string.Empty;
-            Tiempo = 0;
+            TiempoTotal = 0;
 
             Detalle = new List<ProyectosDetalle>();
         }

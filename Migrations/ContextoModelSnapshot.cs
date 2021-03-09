@@ -28,7 +28,7 @@ namespace Parcial2_ap1_2018_0619.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Tiempo")
+                    b.Property<int>("TiempoTotal")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TipoId");

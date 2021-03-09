@@ -114,6 +114,8 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.TiempotextBox.Name = "TiempotextBox";
             this.TiempotextBox.Size = new System.Drawing.Size(119, 23);
             this.TiempotextBox.TabIndex = 19;
+            this.TiempotextBox.Text = "0";
+            this.TiempotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TiempotextBox_KeyPress);
             // 
             // label6
             // 
@@ -287,6 +289,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             // TotaltextBox
             // 
             this.TotaltextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotaltextBox.Enabled = false;
             this.TotaltextBox.Location = new System.Drawing.Point(469, 325);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(140, 23);

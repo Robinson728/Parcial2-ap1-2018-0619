@@ -31,6 +31,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             IdnumericUpDown.Value = 0;
             FechadateTimePicker.Value = DateTime.Now;
             DescripciontextBox.Clear();
+            TotaltextBox.Text = "0";
 
             this.Detalle = new List<ProyectosDetalle>();
             CargarGrid();
@@ -41,7 +42,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             IdnumericUpDown.Value = proyectos.TipoId;
             FechadateTimePicker.Value = proyectos.Fecha;
             DescripciontextBox.Text = proyectos.Descripcion;
-            proyectos.Tiempo = Convert.ToInt32(TotaltextBox.Text);
+            TotaltextBox.Text = Convert.ToString(proyectos.TiempoTotal);
             this.Detalle = proyectos.Detalle;
             CargarGrid();
         }
@@ -53,7 +54,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             proyectos.TipoId = (int)IdnumericUpDown.Value;
             proyectos.Fecha = FechadateTimePicker.Value;
             proyectos.Descripcion = DescripciontextBox.Text;
-            proyectos.Tiempo = Convert.ToInt32(TotaltextBox.Text);
+            proyectos.TiempoTotal += Convert.ToInt32(TotaltextBox.Text);
             proyectos.Detalle = this.Detalle;
             CargarGrid();
 
@@ -112,6 +113,29 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             return paso;
         }
 
+        private Tareas BuscarId(string tipo)
+        {
+            Tareas tarea = new Tareas();
+            if (tipo == "Análisis")
+            {
+                tarea = TareasBLL.Buscar(1);
+            }
+            if (tipo == "Diseño")
+            {
+                tarea = TareasBLL.Buscar(2);
+            }
+            if (tipo == "Programación")
+            {
+                tarea = TareasBLL.Buscar(3);
+            }
+            if (tipo == "Prueba")
+            {
+                tarea = TareasBLL.Buscar(4);
+            }
+
+            return tarea;
+        }
+
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             Proyectos proyectos = new Proyectos(); 
@@ -134,14 +158,14 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             if (DetallesdataGridView.DataSource != null)
                 this.Detalle = (List<ProyectosDetalle>)DetallesdataGridView.DataSource;
 
-            Tareas tareas = TareasBLL.Buscar(Convert.ToInt32(TareacomboBox.Text));
+            Tareas tareas = BuscarId(TareacomboBox.Text);
 
             this.Detalle.Add(new ProyectosDetalle()
             {
                 TipoId = tareas.TareaId,
                 TipoTarea = tareas.TipoTarea,
-                Requerimiento=RequerimientotextBox.Text,
-                Tiempo=Convert.ToInt32(TiempotextBox.Text)
+                Requerimiento = RequerimientotextBox.Text,
+                Tiempo = Convert.ToInt32(TiempotextBox.Text)
             });
             
             int total = Convert.ToInt32(TotaltextBox.Text);
@@ -161,7 +185,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             if((DetallesdataGridView.Rows.Count > 0) && (DetallesdataGridView.CurrentRow != null))
             {
                 int total = Convert.ToInt32(TotaltextBox.Text);
-                string tiempo = DetallesdataGridView.CurrentRow.Cells[3].Value.ToString();
+                string tiempo = DetallesdataGridView.CurrentRow.Cells[4].Value.ToString();
                 total -= Convert.ToInt32(tiempo);
                 TotaltextBox.Text = Convert.ToString(total);
 
@@ -216,8 +240,27 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
         private void rProyectos_Load(object sender, EventArgs e)
         {
             TareacomboBox.DataSource = TareasBLL.GetTareas();
-            TareacomboBox.DisplayMember = "TareaId";
+            TareacomboBox.DisplayMember = "TipoTarea";
             TareacomboBox.ValueMember = "TareaId";
+        }
+
+        private void TiempotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
     }
 }

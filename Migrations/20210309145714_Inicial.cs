@@ -15,7 +15,7 @@ namespace Parcial2_ap1_2018_0619.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Descripcion = table.Column<string>(type: "TEXT", nullable: true),
-                    Tiempo = table.Column<int>(type: "INTEGER", nullable: false)
+                    TiempoTotal = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

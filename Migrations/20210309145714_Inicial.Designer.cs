@@ -9,7 +9,7 @@ using Parcial2_ap1_2018_0619.DAL;
 namespace Parcial2_ap1_2018_0619.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210309012857_Inicial")]
+    [Migration("20210309145714_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace Parcial2_ap1_2018_0619.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Tiempo")
+                    b.Property<int>("TiempoTotal")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TipoId");
