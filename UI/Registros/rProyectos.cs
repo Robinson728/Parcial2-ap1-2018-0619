@@ -123,7 +123,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             if (proyectos != null)
                 LlenaCampo(proyectos);
             else
-                MessageBox.Show("Transacción Fallida", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Proyecto no encontrado", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
