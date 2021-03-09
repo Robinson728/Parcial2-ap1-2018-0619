@@ -9,7 +9,7 @@ using Parcial2_ap1_2018_0619.DAL;
 namespace Parcial2_ap1_2018_0619.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210308230028_Inicial")]
+    [Migration("20210309012857_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Parcial2_ap1_2018_0619.Migrations
 
             modelBuilder.Entity("Parcial2_ap1_2018_0619.Entidades.Proyectos", b =>
                 {
-                    b.Property<int>("ProyectoId")
+                    b.Property<int>("TipoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -30,18 +30,18 @@ namespace Parcial2_ap1_2018_0619.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ProyectoId");
+                    b.Property<int>("Tiempo")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("TipoId");
 
                     b.ToTable("Proyectos");
                 });
 
             modelBuilder.Entity("Parcial2_ap1_2018_0619.Entidades.ProyectosDetalle", b =>
                 {
-                    b.Property<int>("TipoId")
+                    b.Property<int>("DetalleId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("ProyectoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Requerimiento")
@@ -50,12 +50,15 @@ namespace Parcial2_ap1_2018_0619.Migrations
                     b.Property<int>("Tiempo")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("TipoId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("TipoTarea")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TipoId");
+                    b.HasKey("DetalleId");
 
-                    b.HasIndex("ProyectoId");
+                    b.HasIndex("TipoId");
 
                     b.ToTable("ProyectosDetalle");
                 });
@@ -100,7 +103,9 @@ namespace Parcial2_ap1_2018_0619.Migrations
                 {
                     b.HasOne("Parcial2_ap1_2018_0619.Entidades.Proyectos", null)
                         .WithMany("Detalle")
-                        .HasForeignKey("ProyectoId");
+                        .HasForeignKey("TipoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Parcial2_ap1_2018_0619.Entidades.Tareas", b =>

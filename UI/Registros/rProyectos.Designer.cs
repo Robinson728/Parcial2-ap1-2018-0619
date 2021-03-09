@@ -291,6 +291,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(140, 23);
             this.TotaltextBox.TabIndex = 18;
+            this.TotaltextBox.Text = "0";
             // 
             // label7
             // 

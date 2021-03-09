@@ -38,9 +38,10 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
 
         private void LlenaCampo(Proyectos proyectos)
         {
-            IdnumericUpDown.Value = proyectos.ProyectoId;
+            IdnumericUpDown.Value = proyectos.TipoId;
             FechadateTimePicker.Value = proyectos.Fecha;
             DescripciontextBox.Text = proyectos.Descripcion;
+            proyectos.Tiempo = Convert.ToInt32(TotaltextBox.Text);
             this.Detalle = proyectos.Detalle;
             CargarGrid();
         }
@@ -49,9 +50,10 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
         {
             Proyectos proyectos = new Proyectos();
 
-            proyectos.ProyectoId = (int)IdnumericUpDown.Value;
+            proyectos.TipoId = (int)IdnumericUpDown.Value;
             proyectos.Fecha = FechadateTimePicker.Value;
             proyectos.Descripcion = DescripciontextBox.Text;
+            proyectos.Tiempo = Convert.ToInt32(TotaltextBox.Text);
             proyectos.Detalle = this.Detalle;
             CargarGrid();
 
@@ -90,6 +92,26 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             return paso;
         }
 
+        private bool ValidarDetalle()
+        {
+            bool paso = true;
+
+            if (string.IsNullOrWhiteSpace(RequerimientotextBox.Text))
+            {
+                ErrorProvider.SetError(RequerimientotextBox, "Este campo no puede estar vacío");
+                RequerimientotextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(TiempotextBox.Text))
+            {
+                ErrorProvider.SetError(TiempotextBox, "Este campo no puede estar vacío");
+                TiempotextBox.Focus();
+                paso = false;
+            }
+
+            return paso;
+        }
+
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             Proyectos proyectos = new Proyectos(); 
@@ -106,6 +128,9 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
+            if (!ValidarDetalle())
+                return;
+
             if (DetallesdataGridView.DataSource != null)
                 this.Detalle = (List<ProyectosDetalle>)DetallesdataGridView.DataSource;
 
@@ -113,13 +138,14 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
 
             this.Detalle.Add(new ProyectosDetalle()
             {
+                TipoId = tareas.TareaId,
                 TipoTarea = tareas.TipoTarea,
                 Requerimiento=RequerimientotextBox.Text,
                 Tiempo=Convert.ToInt32(TiempotextBox.Text)
             });
-
-            int tiempo = Convert.ToInt32(TiempotextBox.Text);
+            
             int total = Convert.ToInt32(TotaltextBox.Text);
+            int tiempo = Convert.ToInt32(TiempotextBox.Text);
             total += tiempo;
             TotaltextBox.Text = Convert.ToString(total);
 
@@ -127,6 +153,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
             TareacomboBox.Focus();
             RequerimientotextBox.Clear();
             TiempotextBox.Clear();
+            ErrorProvider.Clear();
         }
 
         private void RemoverButton_Click(object sender, EventArgs e)
@@ -189,7 +216,7 @@ namespace Parcial2_ap1_2018_0619.UI.Registros
         private void rProyectos_Load(object sender, EventArgs e)
         {
             TareacomboBox.DataSource = TareasBLL.GetTareas();
-            TareacomboBox.DisplayMember = "TipoTarea";
+            TareacomboBox.DisplayMember = "TareaId";
             TareacomboBox.ValueMember = "TareaId";
         }
     }

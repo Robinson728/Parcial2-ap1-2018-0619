@@ -14,7 +14,7 @@ namespace Parcial2_ap1_2018_0619.BLL
     {
         public static bool Guardar(Proyectos proyectos)
         {
-            if (!Existe(proyectos.ProyectoId))
+            if (!Existe(proyectos.TipoId))
                 return Insertar(proyectos);
             else
                 return Modificar(proyectos);
@@ -49,7 +49,7 @@ namespace Parcial2_ap1_2018_0619.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDetalle where ProyectoId={proyectos.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM ProyectosDetalle where TipoId={proyectos.TipoId}");
                 foreach(var anterior in proyectos.Detalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;
@@ -76,7 +76,7 @@ namespace Parcial2_ap1_2018_0619.BLL
 
             try
             {
-                encontrado = contexto.Proyectos.Any(e => e.ProyectoId == id);
+                encontrado = contexto.Proyectos.Any(e => e.TipoId == id);
             }
             catch (Exception)
             {
@@ -122,7 +122,7 @@ namespace Parcial2_ap1_2018_0619.BLL
             Proyectos proyectos;
             try
             {
-                proyectos = contexto.Proyectos.Include(e => e.Detalle).Where(r => r.ProyectoId == id).SingleOrDefault();
+                proyectos = contexto.Proyectos.Include(e => e.Detalle).Where(r => r.TipoId == id).SingleOrDefault();
             }
             catch (Exception)
             {
@@ -158,7 +158,7 @@ namespace Parcial2_ap1_2018_0619.BLL
             {
                 Proyectos proyectos = Buscar(id);
 
-                if (proyectos != null)
+                if (proyectos == null)
                     return true;
 
                 if (proyectos.Descripcion == pronombre)

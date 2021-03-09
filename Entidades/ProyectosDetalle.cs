@@ -11,9 +11,11 @@ namespace Parcial2_ap1_2018_0619.Entidades
     {
         [Key]
 
+        public int DetalleId { get; set; }
         public int TipoId { get; set; }
         public string TipoTarea { get; set; }
         public string Requerimiento { get; set; }
         public int Tiempo { get; set; }
+
     }
 }

@@ -81,6 +81,7 @@ namespace Parcial2_ap1_2018_0619.UI.Consultas
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // ConsultasDataGridView
             // 
